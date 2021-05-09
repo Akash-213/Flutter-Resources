@@ -1,0 +1,37 @@
+// import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
+
+// import 'screen2.dart';
+
+// class Screen1 extends StatefulWidget {
+//   @override
+//   _Screen1State createState() => _Screen1State();
+// }
+
+// class _Screen1State extends State<Screen1> {
+//   List<ScreenHiddenDrawer> items = new List();
+//   @override
+//   void initState() {
+//     super.initState();
+
+//     items.add(new ScreenHiddenDrawer(
+//         new ItemHiddenMenu(
+//           name: "Screen 2",
+//           baseStyle:
+//               TextStyle(color: Colors.white.withOpacity(0.8), fontSize: 28.0),
+//           colorLineSelected: Colors.teal,
+//         ),
+//         Screen2()));
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return HiddenDrawerMenu(
+//       backgroundColorMenu: Colors.blueGrey,
+//       backgroundColorAppBar: Colors.cyan,
+//       screens: items,
+//     );
+//   }
+// }
+
+
+simple_gesture_detector: ^0.1.6
