@@ -1,0 +1,34 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+enum DialogAction { tryagain }
+
+class Dialogs {
+  static Future<DialogAction> tryagainDialog(
+    BuildContext context,
+  ) async {
+    final action = await showDialog(
+        context: context,
+        barrierDismissible: true,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            title: Text("OOPS!!"),
+            content: Text("City not found!!"),
+            actions: [
+              RaisedButton(
+                onPressed: () =>
+                    // Navigator.of(context).pop(DialogAction.tryagain),
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, '/', (route) => false),
+                child: Text("Try Again"),
+              )
+            ],
+          );
+        });
+
+    return (action != null) ? action : DialogAction.tryagain;
+  }
+}
